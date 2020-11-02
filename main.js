@@ -1,4 +1,5 @@
-const { empty, withArgs } = require('./eventbox.js')
+const { empty, withArgs, duplicate } = require('./eventbox.js')
 const obj = require('./eventbox.js')
-empty()
-withArgs(['Luffy','Zoro','Ussop','Robin','Nami','Sanji','Ch0pper'])
+empty()             //Exo 1 
+withArgs(['Luffy','Zoro','Ussop','Robin','Nami','Sanji','Ch0pper'])                 // Exo 2
+duplicate("test")
