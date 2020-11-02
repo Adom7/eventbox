@@ -8,14 +8,16 @@ function empty(){
     myEmitter.emit('hi')
 }
 
-function withArgs(names,array){
-    myEmitter.on('newFellow',() =>
-    console.log("Here come's a new pirate ->> "+ name)
+function withArgs(names){
+    myEmitter.on('newFellow',(element) =>
+    console.log("Here come's a new pirate ->> "+ element)
     );
-    myEmitter.emit('newFellow')
+for (let i = 0; i < names.length; i++) {
+    const x = names[i];
+    myEmitter.emit('newFellow',x)
 }
-
+}
 module.exports={
     empty,
-    withArgs
+    withArgs,
 }
