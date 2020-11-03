@@ -24,7 +24,7 @@ function transform(filename, re, fn, in_stdout = true) {
   })
 
   const readStream = fs.createReadStream(filename)
-  if (in_stdout == true) {                                          // Modif perso If and Else
+  if (in_stdout == true) {                               // Modif perso If and Else et in_stdout = true dans les parametres
     readStream
     .pipe(transformer)
     .pipe(process.stdout)
@@ -32,6 +32,13 @@ function transform(filename, re, fn, in_stdout = true) {
   else {
 
   }
+}
+
+function csv2json (filename) {      //Exo 6
+  const { name} = path.parse(filename)
+  const readStream = fs.createReadStream(filename)
+  const writeStream = fs.createWriteStream(`${name}.json$`)
+  readStream.pipe(writeStream)
 }
 
 module.exports = {

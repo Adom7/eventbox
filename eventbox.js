@@ -19,9 +19,14 @@ for (let i = 0; i < names.length; i++) {
 }
 
 
-function duplicate(filename){
+function duplicate(filename){       //Exo 3-4-5 sauté 
 return filename
 }
+
+function cvs2json(filename){            //Exo 6
+
+}
+
 module.exports={
     empty,
     withArgs,
